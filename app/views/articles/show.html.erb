@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <a class="navbar-brand" href="/articles">Wikinimous</a>
+</nav>
+  <div class="container">
+
+<h1><%= @article.title %></h1>
+<br>
+
+<p><%= @article.content %></p>
+
+<%= link_to "Back to list", articles_path %>
+
+<br>
+
+<%= link_to "Edit this article", edit_article_path %>
+
+<br>
+
+<%= link_to "Delete this article", @article, method: :delete %>
+</div>

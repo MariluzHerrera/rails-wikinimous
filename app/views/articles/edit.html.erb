@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <a class="navbar-brand" href="/articles">Wikinimous</a>
+</nav>
+  <div class="container">
+
+<h1>Edit article</h1>
+
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+<br>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<br>
+<%= link_to "Back to list", articles_path %>
+
+</div>
